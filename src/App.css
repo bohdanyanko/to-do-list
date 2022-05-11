@@ -1,0 +1,183 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.header {
+  background-color: rgb(224, 79, 65);
+  padding: 0 10px;
+  color: white;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar {
+  width: 15vw;
+  padding: 20px;
+  background-color: rgb(247, 247, 247);
+}
+
+.sidebarBtn {
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.sidebarBtn svg {
+  margin-right: 1rem;
+}
+
+.sidebarBtn.active {
+  background-color: rgb(214, 213, 213);
+}
+
+.sidebar > button:hover {
+  background-color: rgb(172, 172, 172);
+}
+
+
+
+.content {
+  padding: 20px 40px;
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+}
+
+.noteForms, .topicForms {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.noteForms label, .topicForms label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.noteForms input, select {
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+.topicForms input {
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+.noteFormsHeader, .topicFormsHeader { 
+  border-bottom: 1px solid rgb(226, 225, 225);
+}
+
+.noteFormsBody, .topicFormsBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.noteFormsButtons, .topicFormsButtons {
+  display: flex;
+  justify-content: end;
+}
+
+.cancelBtn {
+  padding: 10px 12px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(128, 128, 128);
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 4px;
+  margin-right: 0.2rem;
+}
+
+.cancelBtn:hover {
+  background-color: rgb(128, 128, 128);
+  color: rgb(255, 255, 255);
+}
+
+.submitBtn {
+  padding: 10px 18px;
+  background-color: rgb(224, 79, 65);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 79, 65);
+  border-radius: 4px;
+}
+
+.addNewNoteBtn {
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.addNewNoteBtn:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.noteBody {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: 2px black solid;
+}
+
+.noteCheckSquareBtn, .noteRegSquareBtn, .noteDueDate, .noteEditBtn {
+  margin-right: 1.5rem;
+}
+
+.noteTitle {
+  margin-right: auto;
+}
+
+.popUp {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+
+.popUp.active {
+  transform: scale(1);
+}
+
+.popUp__content {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  width: 50vw;
+}
